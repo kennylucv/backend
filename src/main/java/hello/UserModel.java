@@ -128,7 +128,7 @@ public class UserModel {
                 String type =   (String) accountDoc.get("type");
                 String amount = (String) accountDoc.get("amount");
                 accountTypes.add(type);
-                accountAmounts.add(amount);
+                accountAmounts.add("$"+amount+" CAD");
             }
 		}
 	};
