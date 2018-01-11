@@ -76,6 +76,12 @@ objects:
               port: 9080
             initialDelaySeconds: 15
             timeoutSeconds: 1
+          livenessProbe:
+            exec:
+              command:
+              - /config/health.sh
+            initialDelaySeconds: 15
+            timeoutSeconds: 1
           image: "${APPLICATION_NAME}"
           ports:
           - containerPort: 9080
